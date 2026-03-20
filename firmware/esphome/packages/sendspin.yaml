@@ -9,47 +9,9 @@
 # ============================================================
 
 external_components:
-  ## Latest refs are not building at the moment
-  ## so pinning to specific commits that are known to work
-  # - source: github://pr#12253
-  #   components: [ mixer ]
-  #   refresh: 24h
-
-  # - source: github://pr#12254
-  #   components: [ resampler ]
-  #   refresh: 24h
-
-  # - source: github://pr#12256
-  #   components: [ audio ]
-  #   refresh: 24h
-
-  # - source: github://pr#12258
-  #   components: [ media_player ]
-  #   refresh: 24h
-    
-  # - source: github://pr#12284
-  #   components: [ mdns, sendspin ]
-  #   refresh: 24h
-
-  # - source: github://pr#12429
-  #   components: [ file, http_request, media_source, speaker_source ]
-  #   refresh: 24h
-  
-  ## Speciifc commits that are known to produce a working build
-  ## https://github.com/esphome/esphome/pull/12284#issuecomment-3929269125
-  - source:
-      # https://github.com/esphome/esphome/pull/14933
-      type: git
-      url: https://github.com/esphome/esphome
-      ref: 527b15693840b5524dcd131485aae64790978fdb
-    refresh: 0s
-    components: [ file, http_request, media_source, speaker_source ]
-  - source:
-      # https://github.com/esphome/esphome/pull/14933
-      type: git
-      url: https://github.com/esphome/esphome
-      ref: 527b15693840b5524dcd131485aae64790978fdb
-    components: [ sendspin ]
+  - source: github://pr#14933
+    components: [const, generic_image, media_source, sendspin]
+    refresh: 1h
   
 globals:
   - id: current_volume
